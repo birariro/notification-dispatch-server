@@ -1,0 +1,29 @@
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  jpa:
+    open-in-view: false
+
+logging:
+  level:
+    ROOT: INFO
+
+application:
+  scheduler:
+    planDelay: 1000
+
+adapter:
+  api:
+    sms: http://localhost:8080/send/sms
+    push: http://localhost:8080/send/push
+    email: http://localhost:8080/send/email
+
+  queue:
+    recovery:
+      delay: 1000
+      maxDelay: 20000
